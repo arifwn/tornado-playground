@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="{{ static_url("css/main.css") }}" rel="stylesheet">
+        <script src="{{ static_url("js/jquery.js") }}"></script>
+        <script src="{{ static_url("js/main.js") }}"></script>
+        <title>Chat with Comet</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="page-header">
+                        <h1>Chat with Comet <small>Let's Chat!</small></h1>
+                    </div>
+                    <table id="chatlist" class="table table-condensed">
+                        <thead>
+                            
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <div class="navbar navbar-fixed-bottom">
+            <div class="navbar-inner">
+                <div class="container">
+                    <form id="chatform" class="navbar-search form-inline" action="">
+                        <input id="chatname" type="text" class="span2" placeholder="your name">
+                        <input id="chatmessage" type="text" class="span5" placeholder="message">
+                        <input type="submit" class="btn btn-primary" value="Send">
+                    </form>
+                    <ul class="nav">
+                        <li class="divider-vertical"></li>
+                        <li><a>message: <span id="message-status-text">--</span></a></li>
+                        <li><a>socket: <span id="socket-status-text">--</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>

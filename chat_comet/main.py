@@ -19,9 +19,9 @@ class MessageHandler(tornado.web.RequestHandler):
     @tornado.web.asynchronous
     def get(self):
         global participants
-        participants.add(self.on_new_message)
+        participants.add(self)
     
-    def on_new_message(self, name, message):
+    def send_message(self, name, message):
         if self.request.connection.stream.closed():
             return
         
@@ -35,9 +35,9 @@ class NewMessageHandler(tornado.web.RequestHandler):
         global participants
         name = self.get_argument("name")
         message = self.get_argument("message")
-        for callback in participants:
+        for participant in participants:
             try:
-                callback(name, message)
+                participant.send_message(name, message)
             except:
                 logging.error("Error in participant callback", exc_info=True)
         
