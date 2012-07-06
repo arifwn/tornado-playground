@@ -11,6 +11,7 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'hostapp.views.home', name='home'),
     # url(r'^hostapp/', include('hostapp.foo.urls')),
+    url(r'^api/', include('exposer.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
