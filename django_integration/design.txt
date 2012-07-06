@@ -1,0 +1,7 @@
+Integration with Django
+=======================
+
+* Django run as REST web service
+* Possible API:
+  * authenticate(user, pass): return user or none
+  
